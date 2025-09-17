@@ -10,6 +10,7 @@ import {
   InputLabel,
   Select,
   Stack,
+  SelectChangeEvent,
 } from "@mui/material";
 
 export default function BookACallPage() {
@@ -37,8 +38,8 @@ export default function BookACallPage() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSelectChange = (e: any) => {
-    setFormData((prev) => ({ ...prev, hospital: e.target.value }));
+  const handleSelectChange = (e: SelectChangeEvent) => {
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
