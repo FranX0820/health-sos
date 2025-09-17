@@ -45,13 +45,13 @@ const SosPage: React.FC = () => {
             );
             const data = await res.json();
             setAddress(data.display_name || "Address not found");
-          } catch (err) {
+          } catch (_err) {
             setAddress("Unable to fetch address");
           }
           setLoading(false);
           setConfirmOpen(true);
         },
-        (err) => {
+        (_err) => {
           alert("Location access is required for SOS!");
           setLoading(false);
         }

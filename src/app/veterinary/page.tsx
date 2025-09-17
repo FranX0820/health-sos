@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import {
-  Box,
+
   Button,
   Card,
   CardContent,
@@ -10,7 +10,6 @@ import {
   IconButton,
   List,
   ListItem,
-  ListItemAvatar,
   Avatar,
   ListItemText,
   TextField,
@@ -23,6 +22,7 @@ import LocalHospitalIcon from "@mui/icons-material/LocalHospital";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import ImageIcon from "@mui/icons-material/Image";
 import CircularProgress from "@mui/material/CircularProgress";
+import Image from "next/image";
 
 type Message = {
   id: string;
@@ -183,7 +183,7 @@ export default function VeterinaryPage() {
           >
             Ask our assistant about symptoms, get first-aid tips, or request
             veterinary services and pet ambulances. This chat can be powered by
-            IBM Watson later — for now it's a demo UI.
+            IBM Watson later — for now it&apos;s a demo UI.
           </Typography>
         </div>
 
@@ -299,7 +299,7 @@ export default function VeterinaryPage() {
                       style={{ wordBreak: "break-word" }}
                     >
                       {m.imgUrl && (
-                        <img
+                        <Image
                           src={m.imgUrl}
                           alt="uploaded"
                           className="rounded-md mb-2 max-h-48 object-contain"
@@ -368,7 +368,7 @@ export default function VeterinaryPage() {
                 {/* Preview + send area */}
                 {uploadPreview && (
                   <div className="mt-3 flex items-start gap-3">
-                    <img
+                    <Image
                       src={uploadPreview}
                       alt="preview"
                       className="w-24 h-24 rounded-md object-cover"

@@ -3,15 +3,10 @@ import { Poppins } from "next/font/google";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 import React from "react";
 
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: "400",
-});
-
 export default function Password() {
   const [visible, isVisible] = React.useState(false);
 
-  const toggleVisibility = (_e: any) => {
+  const toggleVisibility = () => {
     isVisible(!visible);
   };
   return (

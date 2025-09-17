@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { ReactNode } from "react";
-import Header from "../_components/header";
+
 
 export const metadata: Metadata = {
   title: "Book a Call | My App",
